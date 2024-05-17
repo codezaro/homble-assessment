@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.product_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 10px;
+  column-gap: 15px;
+}
+.product {
+  /* width: 200px;
+  height: 200px; */
+}
+.product_container img {
+  max-width: 350px;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
