@@ -3,7 +3,16 @@
   place-items: center;
   gap: 20px;
   position: relative;
-  top: 50px;
+}
+.box {
+  border: 4px solid rgb(42, 93, 21);
+  width: 700px;
+  border-radius: 12px;
+  height: 304px;
+}
+.box:hover {
+  background-color: rgb(85, 197, 85);
+  border: 4px solid rgb(111, 237, 61);
 }
 .description {
   display: flex;
@@ -18,7 +27,24 @@
 }
 .about {
   position: relative;
-  top: 45px;
+  top: 15px;
   font-weight: 600;
   font-size: 18px;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* margin: 20px; */
+  /* gap: 300px; */
+  height: 100px;
+  width: 100%;
+  padding: 0 20px;
+}
+.shift {
+  position: relative;
+  top: 20px;
+  height: 60px;
+  width: 160px;
 }

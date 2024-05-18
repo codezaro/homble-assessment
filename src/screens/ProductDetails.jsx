@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRequest, postRequest } from "../axios.js";
 import "./ProductDetails.css";
+import Logo from "../assets/logo_green1.png";
+import { Link } from "react-router-dom";
+
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -24,21 +27,32 @@ const ProductDetails = () => {
 
   return (
     <div className="wrapper">
-      <h1>Product Details</h1>
-      {product ? (
-        <div className="description">
-          <div className="image">
-            <img src={product.productImage} alt={product.name} />
-          </div>
-          <div className="about">
-            <p>Name: {product.name}</p>
-            <p>Price: {product.selling_price}</p>
-            <p>About: {product.description}</p>
-            <p>Allergen: {product.allergen_info}</p>
-            <p>Usage: {product.cooking_instruction}</p>
-          </div>
+      <div className="header">
+        <div className="logo_heading ">
+          <Link to={`/product`}>
+            <img src={Logo} alt="" className="logo shift" />
+          </Link>
+          <p className="heading">
+            <i>Product Details</i>
+          </p>
         </div>
-      ) : null}
+      </div>
+      <div className="wrapper box">
+        {product ? (
+          <div className="description">
+            <div className="image">
+              <img src={product.productImage} alt={product.name} />
+            </div>
+            <div className="about">
+              <p>Name: {product.name}</p>
+              <p>Price: &#8377;{product.selling_price}</p>
+              <p>About: {product.description}</p>
+              <p>Allergen: {product.allergen_info}</p>
+              <p>Usage: {product.cooking_instruction}</p>
+            </div>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 };

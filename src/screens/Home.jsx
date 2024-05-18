@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 800);
   }, []);
 
   return <div>{loading ? <LoadingSkeleton /> : <ProductList />}</div>;
