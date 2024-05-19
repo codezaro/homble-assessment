@@ -54,3 +54,42 @@
 .highlightcolor {
   background-color: #999797;
 }
+@media (max-width: 800px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100px;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .box {
+    border: 4px solid rgb(42, 93, 21);
+    width: 404px;
+    border-radius: 12px;
+    height: 524px;
+    display: relative;
+  }
+  .image img {
+    display: absolute;
+    top: 100;
+    border-radius: 10px;
+    height: 300px;
+    width: 400px;
+    border: 2px solid rgb(42, 93, 21);
+  }
+  .about {
+    position: relative;
+    top: -35px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 0;
+  }
+}

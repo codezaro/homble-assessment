@@ -29,7 +29,7 @@ const ProductDetails = () => {
     <div className="wrapper">
       <div className="header">
         <div className="logo_heading ">
-          <Link to={`/product`}>
+          <Link to={`/`}>
             <img src={Logo} alt="" className="logo shift" />
           </Link>
           <p className="heading">
