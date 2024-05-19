@@ -8,7 +8,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import "./ProductList.css";
 import Logo from "../assets/logo_green1.png";
 import LoadingSkeleton from "./LoadingSkeleton.jsx";
-import ModalComponent from "./Modal.jsx";
+import Modal from "./Modal.jsx";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -80,7 +80,6 @@ const ProductList = () => {
           ) : (
             <button onClick={handleToggleModal} className="add_product">
               Add Product
-              {showModal && <ModalComponent />}
             </button>
           )}
 
@@ -143,6 +142,7 @@ const ProductList = () => {
               </Link>
             ))}
       </div>
+      {showModal && <Modal />}
     </div>
   );
 };
