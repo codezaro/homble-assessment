@@ -48,3 +48,9 @@
   height: 60px;
   width: 160px;
 }
+.basecolor {
+  background-color: #f0f0f0;
+}
+.highlightcolor {
+  background-color: #999797;
+}

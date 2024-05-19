@@ -10,9 +10,10 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        {/* <Route path="/product" element={<ProductList />} />
-        <Route path="/product/:id" element={<ProductDetails />} /> */}
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/product" element={<ProductList />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

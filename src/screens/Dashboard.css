@@ -1,0 +1,56 @@
+/* src/components/Dashboard.css */
+.dashboard {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.width {
+  width: 300px;
+}
+
+th {
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+th:hover {
+  background-color: #eaeaea;
+}
+.delete {
+  cursor: default;
+}
+.delete:hover {
+  background-color: #f4f4f4;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.inputstyle {
+  align-self: center;
+  justify-self: center;
+  width: 300px;
+  height: 25px;
+  border: 2px solid green;
+  border-radius: 15px;
+  padding-left: 15px;
+}
+.inputstyle::placeholder {
+  font-size: 15px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid green;
+  outline: 1px solid green;
+  border-collapse: collapse;
+}

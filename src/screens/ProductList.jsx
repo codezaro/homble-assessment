@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { getRequest, postRequest } from "../axios.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import "./ProductList.css";
 import Logo from "../assets/logo_green1.png";
@@ -12,6 +14,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [errorMsg, setErrorMsg] = useState(null);
   const [loading, setLoading] = useState(true);
+  //   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -22,7 +25,7 @@ const ProductList = () => {
           (a, b) => a.selling_price - b.selling_price
         );
         setProducts(sortedProducts);
-
+        setLoading(false);
         console.log(sortedProducts);
       })
       .catch((error) => {
@@ -46,15 +49,15 @@ const ProductList = () => {
           </p>
         </div>
 
-        <input
-          type="text"
-          placeholder="Search your product here..."
-          className="search"
-        />
-        <button onClick={handleToggleModal} className="add_product">
-          Add Product
-          {showModal && <Modal />}
-        </button>
+        <div className="buttons">
+          <button onClick={handleToggleModal} className="add_product">
+            Add Product
+            {showModal && <Modal />}
+          </button>
+          <Link to={`/dashboard`}>
+            <button className="add_product">Dashboard</button>{" "}
+          </Link>
+        </div>
       </div>
 
       <div className="product_container">

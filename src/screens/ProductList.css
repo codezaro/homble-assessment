@@ -52,9 +52,9 @@
 }
 .search {
   position: relative;
-  right: 140px;
+  right: 70px;
   height: 25px;
-  width: 300px;
+  width: 250px;
   border: 1px solid rgb(22, 126, 62);
   border-radius: 10px;
 }
@@ -81,6 +81,7 @@
   background-color: rgb(89, 156, 89);
   border: 1px solid greenyellow;
   font-weight: 600;
+  cursor: pointer;
 }
 .add_product:hover {
   background-color: rgb(125, 189, 29);
@@ -101,29 +102,6 @@
 .essentials div {
   padding-right: 10px;
 }
-@media (max-width: 1210px) {
-  .search {
-    position: relative;
-    right: 80px;
-    height: 25px;
-    width: 200px;
-    border: 1px solid rgb(22, 126, 62);
-    border-radius: 10px;
-  }
-}
-@media (max-width: 940px) {
-  .search {
-    position: relative;
-    right: 20px;
-    height: 25px;
-    width: 160px;
-    border: 1px solid rgb(22, 126, 62);
-    border-radius: 10px;
-  }
-  .heading {
-    font-size: 25px;
-  }
-}
 
 @media (max-width: 1110px) {
   .product_container {
@@ -137,19 +115,13 @@
     font-size: 25px;
   }
 }
-@media (max-width: 760px) {
-  .search {
-    position: relative;
-    right: 10px;
-    height: 20px;
-    width: 120px;
-    border: 1px solid rgb(22, 126, 62);
-    border-radius: 10px;
+@media (max-width: 1090px) {
+  .heading {
+    font-size: 30px;
   }
-  .search::placeholder {
-    padding-left: 2px;
-    font-size: 10px;
-  }
+}
+
+@media (max-width: 840px) {
   .product_container {
     display: grid;
     grid-template-columns: repeat(1, 400px);
@@ -165,30 +137,19 @@
     border-radius: 10px;
   }
   .heading {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
+
 @media (max-width: 705px) {
   .essentials {
     font-size: 25px;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 800px) {
   .header {
     flex-direction: column;
     gap: 10px;
     height: 160px;
-  }
-  .search {
-    position: relative;
-    right: 10px;
-    height: 25px;
-    width: 200px;
-    border: 1px solid rgb(22, 126, 62);
-    border-radius: 10px;
-  }
-  .search::placeholder {
-    padding-left: 5px;
-    font-size: 12px;
   }
 }
