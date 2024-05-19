@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getRequest, postRequest } from "../axios.js";
+import { getRequest } from "../axios.js";
 import "./ProductDetails.css";
 import Logo from "../assets/logo_green1.png";
 import { Link } from "react-router-dom";

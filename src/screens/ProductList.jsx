@@ -4,10 +4,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
 import "./ProductList.css";
 import Logo from "../assets/logo_green1.png";
-import LoadingSkeleton from "./LoadingSkeleton.jsx";
+
 import Modal from "./Modal.jsx";
 
 const ProductList = () => {

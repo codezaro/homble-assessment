@@ -44,8 +44,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* margin: 20px; */
-  /* gap: 300px; */
   height: 100px;
   width: 100%;
   padding: 0 20px;
@@ -102,6 +100,9 @@
 .essentials div {
   padding-right: 10px;
 }
+.buttons {
+  padding: 0 20px;
+}
 
 @media (max-width: 1110px) {
   .product_container {
@@ -124,15 +125,15 @@
 @media (max-width: 840px) {
   .product_container {
     display: grid;
-    grid-template-columns: repeat(1, 400px);
+    grid-template-columns: repeat(1, 380px);
 
     row-gap: 10px;
     column-gap: 15px;
     margin: 20px;
   }
   .product_container img {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 380px;
+    max-height: 380px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -141,15 +142,19 @@
   }
 }
 
-@media (max-width: 705px) {
-  .essentials {
-    font-size: 25px;
-  }
-}
 @media (max-width: 800px) {
   .header {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-    height: 160px;
+
+    height: 180px;
+    margin-bottom: 20px;
+  }
+  .buttons {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-self: center;
+    padding: 0 40px;
   }
 }

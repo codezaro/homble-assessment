@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getRequest, postRequest } from "../axios.js";
+import { getRequest } from "../axios.js";
 import "./Dashboard.css";
 import Logo from "../assets/logo_green1.png";
 import { Link } from "react-router-dom";
@@ -57,7 +57,6 @@ const Dashboard = () => {
     setFilteredProducts(updatedProducts);
   };
   useEffect(() => {
-    // Filter products based on search query
     const filtered = products.filter(
       (product) =>
         product.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -117,6 +116,9 @@ const Dashboard = () => {
                 <td className="center">
                   <input
                     type="checkbox"
+                    style={{
+                      cursor: "pointer",
+                    }}
                     onChange={() => handleDelete(product.id)}
                   />
                 </td>

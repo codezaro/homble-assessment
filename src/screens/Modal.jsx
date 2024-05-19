@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { postRequest } from "../axios.js";
 import "./Modal.css";
 
@@ -32,17 +32,15 @@ const Modal = () => {
     <div className="wrap_modal">
       <div onClick={(e) => e.stopPropagation()} className="content">
         <div className="head_er">
-          <span
-            onClick={onClose}
-            className={`${isModalOpen} ? "close-modal-icon" : "close-modal-icon hide"`}
-          >
-            &times;
+          <span onClick={onClose} className={`${isModalOpen} ? "" : "hide"`}>
+            <span class="material-symbols-outlined">close</span>
           </span>
         </div>
         <div className="body">
           <div className="input_field">
             <label htmlFor="name">Name:</label>
             <input
+              required
               type="text"
               name="name"
               id="name"
@@ -55,6 +53,7 @@ const Modal = () => {
           <div className="input_field">
             <label htmlFor="about">About:</label>
             <input
+              required
               type="text"
               id="about"
               name="description"
@@ -67,6 +66,7 @@ const Modal = () => {
           <div className="input_field">
             <label htmlFor="allergy">Allergen:</label>
             <input
+              required
               type="text"
               id="allergy"
               name="allergen"
