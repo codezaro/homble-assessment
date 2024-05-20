@@ -3,10 +3,10 @@ import { getRequest } from "../axios.js";
 import "./Dashboard.css";
 import Logo from "../assets/logo_green1.png";
 import { Link } from "react-router-dom";
+
 const Dashboard = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [search, setSearch] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [sortConfig, setSortConfig] = useState({
