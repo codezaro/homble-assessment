@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Circles } from "react-loader-spinner";
 import { getRequest } from "../axios.js";
 import "./Dashboard.css";
 import Logo from "../assets/logo_green1.png";
@@ -68,75 +69,85 @@ const Dashboard = () => {
   function handleSearchInput(e) {
     setSearch(e.target.value);
   }
-  if (loading) {
-    return <div>Loading data! Please wait.</div>;
-  }
 
   return (
-    <div className="wrapper">
-      <div className="header">
-        <div className="logo_heading ">
-          <Link to={`/`}>
-            <img src={Logo} alt="" className="logo shift" />
-          </Link>
-          <p
-            className="heading"
-            style={{
-              paddingTop: "30px",
-            }}
-          >
-            <i>Product Dashboard</i>
-          </p>
+    <div>
+      {loading ? (
+        <div className="loader">
+          <Circles
+            height={100}
+            width={100}
+            color="rgb(163, 44, 44)"
+            visible={true}
+          />
         </div>
-        <input
-          className="inputstyle"
-          type="text"
-          value={search}
-          onChange={handleSearchInput}
-          placeholder="Search product by name or id"
-        />
-        <span></span>
-        <span></span>
-      </div>
-      <div className="dashboard">
-        <table>
-          <thead>
-            <tr>
-              <th onClick={() => sortProducts("id")}>ID</th>
-              <th className="width" onClick={() => sortProducts("name")}>
-                Product Name
-              </th>
-              <th onClick={() => sortProducts("selling_price")}>
-                Selling Price
-              </th>
-              <th className="delete">Remove Item</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredProducts.map((product) => (
-              <tr key={product.id}>
-                <td>{product.id}</td>
-                <td>{product.name}</td>
-                <td>&#8377;{product.selling_price}</td>
-                <td
-                  className="center"
-                  style={{
-                    height: "45px",
-                  }}
-                >
-                  <input
-                    type="checkbox"
-                    style={{
-                      cursor: "pointer",
-                    }}
-                    onChange={() => handleDelete(product.id)}
-                  />
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      ) : (
+        <div className="wrapper">
+          <div className="header">
+            <div className="logo_heading ">
+              <Link to={`/`}>
+                <img src={Logo} alt="" className="logo shift" />
+              </Link>
+              <p
+                className="heading"
+                style={{
+                  paddingTop: "30px",
+                }}
+              >
+                <i>Product Dashboard</i>
+              </p>
+            </div>
+            <input
+              className="inputstyle"
+              type="text"
+              value={search}
+              onChange={handleSearchInput}
+              placeholder="Search product by name or id"
+            />
+            <span></span>
+            <span></span>
+          </div>
+          <div className="dashboard">
+            <table>
+              <thead>
+                <tr>
+                  <th onClick={() => sortProducts("id")}>ID</th>
+                  <th className="width" onClick={() => sortProducts("name")}>
+                    Product Name
+                  </th>
+                  <th onClick={() => sortProducts("selling_price")}>
+                    Selling Price
+                  </th>
+                  <th className="delete">Remove Item</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filteredProducts.map((product) => (
+                  <tr key={product.id}>
+                    <td>{product.id}</td>
+                    <td>{product.name}</td>
+                    <td>&#8377;{product.selling_price}</td>
+                    <td
+                      className="center"
+                      style={{
+                        height: "45px",
+                      }}
+                    >
+                      <input
+                        type="checkbox"
+                        style={{
+                          cursor: "pointer",
+                        }}
+                        onChange={() => handleDelete(product.id)}
+                      />
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
