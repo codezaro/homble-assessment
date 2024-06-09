@@ -79,7 +79,12 @@ const Dashboard = () => {
           <Link to={`/`}>
             <img src={Logo} alt="" className="logo shift" />
           </Link>
-          <p className="heading">
+          <p
+            className="heading"
+            style={{
+              paddingTop: "30px",
+            }}
+          >
             <i>Product Dashboard</i>
           </p>
         </div>
@@ -88,7 +93,7 @@ const Dashboard = () => {
           type="text"
           value={search}
           onChange={handleSearchInput}
-          placeholder="Search product by name or ID"
+          placeholder="Search product by name or id"
         />
         <span></span>
         <span></span>
@@ -113,7 +118,12 @@ const Dashboard = () => {
                 <td>{product.id}</td>
                 <td>{product.name}</td>
                 <td>&#8377;{product.selling_price}</td>
-                <td className="center">
+                <td
+                  className="center"
+                  style={{
+                    height: "45px",
+                  }}
+                >
                   <input
                     type="checkbox"
                     style={{

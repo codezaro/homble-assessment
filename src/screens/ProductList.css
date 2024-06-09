@@ -19,12 +19,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid rgb(119, 236, 72);
+  border: 3px solid rgb(205, 164, 68);
   border-radius: 10px;
-  background-color: rgb(11, 102, 11);
+  background-color: rgb(144, 85, 21);
 }
 .product:hover {
-  border: 2px solid rgb(52, 130, 21);
+  border: 2px solid rgb(248, 245, 109);
 }
 .product_container img {
   max-width: 350px;
@@ -32,6 +32,12 @@
   object-fit: cover;
   border-radius: 10px;
 }
+.product_container img:hover {
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  transform: scale(1.03);
+}
+
 .logo {
   align-self: center;
   height: 50px;

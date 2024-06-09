@@ -7,9 +7,12 @@ const Modal = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [allergen, setAllergen] = useState("");
-  const inputRef = useRef(null);
 
   function handleSubmit() {
+    if (!name || !description || !allergen) {
+      alert("All fields are required");
+      return;
+    }
     const productData = { name, description, allergen };
     postRequest("/products", productData)
       .then((response) => {
@@ -40,45 +43,45 @@ const Modal = () => {
           <div className="input_field">
             <label htmlFor="name">Name:</label>
             <input
-              required
               type="text"
               name="name"
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              onFocus={() => inputRef.current?.blur()}
               placeholder="Enter name of the product..."
             />
           </div>
           <div className="input_field">
             <label htmlFor="about">About:</label>
             <input
-              required
               type="text"
               id="about"
               name="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              onFocus={() => inputRef.current?.blur()}
               placeholder="Enter description of the product..."
             />
           </div>
           <div className="input_field">
             <label htmlFor="allergy">Allergen:</label>
             <input
-              required
               type="text"
               id="allergy"
               name="allergen"
               value={allergen}
               onChange={(e) => setAllergen(e.target.value)}
-              onFocus={() => inputRef.current?.blur()}
               placeholder="Enter allergen related to the product..."
             />
           </div>
         </div>
 
-        <button ref={inputRef} onClick={handleSubmit} className="add_button">
+        <button
+          style={{
+            paddingBottom: "28px",
+          }}
+          onClick={handleSubmit}
+          className="add_button"
+        >
           Add
         </button>
       </div>

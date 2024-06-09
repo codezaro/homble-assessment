@@ -32,7 +32,12 @@ const ProductDetails = () => {
           <Link to={`/`}>
             <img src={Logo} alt="" className="logo shift" />
           </Link>
-          <p className="heading">
+          <p
+            className="heading"
+            style={{
+              paddingTop: "30px",
+            }}
+          >
             <i>Product Details</i>
           </p>
         </div>

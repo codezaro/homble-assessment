@@ -6,10 +6,10 @@ table {
   width: 100%;
   border-collapse: collapse;
 
-  outline: 2px solid green;
+  outline: 2px solid rgb(205, 164, 68);
 }
 thead {
-  outline: 1px solid green;
+  outline: 1px solid rgb(205, 164, 68);
 }
 th,
 td {
@@ -44,7 +44,7 @@ th:hover {
   justify-self: center;
   width: 300px;
   height: 25px;
-  border: 2px solid green;
+  border: 2px solid rgb(144, 85, 21);
   border-radius: 15px;
   padding-left: 15px;
 }
@@ -53,7 +53,7 @@ th:hover {
 }
 
 input[type="text"]:focus {
-  border: 1px solid green;
-  outline: 1px solid green;
+  border: 1px solid rgb(205, 164, 68);
+  outline: 1px solid rgb(205, 164, 68);
   border-collapse: collapse;
 }

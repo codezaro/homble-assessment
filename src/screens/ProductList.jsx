@@ -134,8 +134,20 @@ const ProductList = () => {
                 <div className="product" key={item.id}>
                   <img src={item.productImage} alt={item.name} />
                   <div className="essentials">
-                    <p>{item.name}</p>
-                    <div>&#8377;{item.selling_price}</div>
+                    <p
+                      style={{
+                        paddingTop: "10px",
+                      }}
+                    >
+                      {item.name}
+                    </p>
+                    <div
+                      style={{
+                        fontSize: "20px",
+                      }}
+                    >
+                      &#8377;{item.selling_price}
+                    </div>
                   </div>
                 </div>
               </Link>

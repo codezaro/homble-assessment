@@ -1,9 +1,9 @@
 .content {
-  border: 2px solid rgb(111, 38, 111);
+  border: 2px solid rgb(196, 132, 196);
   height: 200px;
   width: 500px;
   border-radius: 30px;
-  background-color: rgb(87, 56, 115);
+  background-color: rgb(125, 90, 159);
   display: grid;
   place-content: center;
   position: relative;
@@ -20,6 +20,8 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  animation-name: animatemodal;
+  animation-duration: 0.5s;
 }
 .input_field {
   display: flex;
@@ -31,6 +33,7 @@
 .input_field input {
   width: 300px;
   height: 20px;
+  padding: 10px;
 }
 .body {
   display: flex;
@@ -70,4 +73,14 @@
 }
 .hide {
   display: none;
+}
+@keyframes animatemodal {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }

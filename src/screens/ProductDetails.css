@@ -5,14 +5,14 @@
   position: relative;
 }
 .box {
-  border: 4px solid rgb(42, 93, 21);
+  border: 4px solid rgb(144, 85, 21);
   width: 700px;
   border-radius: 12px;
   height: 304px;
 }
 .box:hover {
-  background-color: rgb(85, 197, 85);
-  border: 4px solid rgb(111, 237, 61);
+  background-color: rgb(205, 164, 68);
+  border: 4px solid rgb(205, 164, 68);
 }
 .description {
   display: flex;
@@ -23,13 +23,21 @@
   border-radius: 10px;
   height: 300px;
   width: 400px;
-  border: 2px solid rgb(42, 93, 21);
+  border: 2px solid rgb(144, 85, 21);
+  transition: transform 0.1s ease;
+  overflow: hidden;
+}
+.image img:hover {
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  transform: scale(1.03);
 }
 .about {
   position: relative;
   top: 15px;
   font-weight: 600;
   font-size: 18px;
+  padding-left: 10px;
 }
 .head {
   display: flex;
@@ -69,7 +77,7 @@
     padding: 0 20px;
   }
   .box {
-    border: 4px solid rgb(42, 93, 21);
+    border: 4px solid rgb(144, 85, 21);
     width: 404px;
     border-radius: 12px;
     height: 524px;
@@ -81,7 +89,7 @@
     border-radius: 10px;
     height: 300px;
     width: 400px;
-    border: 2px solid rgb(42, 93, 21);
+    border: 2px solid rgb(144, 85, 21);
   }
   .about {
     position: relative;
